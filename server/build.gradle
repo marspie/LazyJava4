@@ -1,0 +1,32 @@
+plugins {
+    id 'org.springframework.boot' version '1.5.7.RELEASE'
+    id 'java'
+}
+
+//group 'com.marspie'
+//version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+
+sourceCompatibility = 1.8
+
+
+
+jar {
+    baseName = 'server'
+    version =  '1.0-SNAPSHOT'
+}
+
+repositories {
+    //使用淘宝的maven镜像
+    maven{ url 'http://maven.aliyun.com/nexus/content/groups/public'}
+    mavenCentral()
+}
+
+dependencies {
+//    compile project(':web')//server模块依赖web模块
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-devtools")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}
