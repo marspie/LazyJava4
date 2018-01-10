@@ -1,10 +1,9 @@
 package com.marspie.framework.config;
+
 import com.marspie.framework.common.filter.JWTAuthenticationFilter;
 import com.marspie.framework.common.filter.JWTLoginFilter;
 import com.marspie.modules.sys.services.WebAuthenticationProvider;
-import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
