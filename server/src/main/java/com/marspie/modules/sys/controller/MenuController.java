@@ -1,6 +1,7 @@
 package com.marspie.modules.sys.controller;
 
 import com.marspie.framework.common.controller.BaseController;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @create 2018-01-09 17:20
  **/
 @RestController
+@RequestMapping("/menu")
 public class MenuController extends BaseController {
 
 

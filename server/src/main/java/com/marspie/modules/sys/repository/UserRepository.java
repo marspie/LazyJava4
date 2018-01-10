@@ -9,4 +9,6 @@ import com.marspie.modules.sys.entity.UserEntity;
  * @create 2018-01-09 17:28
  **/
 public interface UserRepository extends BaseRepository<UserEntity, Long>{
+
+    UserEntity findByUsername(String username);
 }
