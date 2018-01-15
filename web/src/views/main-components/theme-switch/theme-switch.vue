@@ -19,7 +19,7 @@
 
 <script>
 import Cookies from 'js-cookie';
-import config from '../../../../build/config.js';
+import config from '../../../../script/config.js';
 export default {
     name: 'themeSwitch',
     data () {

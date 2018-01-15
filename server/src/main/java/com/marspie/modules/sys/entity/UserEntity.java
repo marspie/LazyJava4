@@ -3,6 +3,8 @@ package com.marspie.modules.sys.entity;
 import com.marspie.framework.common.entity.BaseEntity;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
+
 
 /**
  * @author alex.yao
@@ -10,6 +12,7 @@ import javax.persistence.Entity;
  * @create 2018-01-09 17:26
  **/
 @Entity
+@Table(name = "tbl_user")
 public class UserEntity extends BaseEntity<UserEntity> {
 
     private String username;

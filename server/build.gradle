@@ -16,11 +16,12 @@ repositories {
 
 dependencies {
 //    server打包时把web的资源先打包，并作为依赖，加入到server项目生成的jar包中
-//    compile project(':web')//server模块依赖web模块
+    compile project(':web')//server模块依赖web模块
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('org.springframework.boot:spring-boot-starter-security')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('io.jsonwebtoken:jjwt:0.9.0')
+    compile('com.alibaba:fastjson:1.2.44')
     runtime('com.h2database:h2')
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('org.springframework.security:spring-security-test')

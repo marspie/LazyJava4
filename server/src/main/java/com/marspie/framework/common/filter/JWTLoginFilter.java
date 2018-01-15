@@ -68,5 +68,7 @@ public class JWTLoginFilter extends UsernamePasswordAuthenticationFilter {
                 .signWith(SignatureAlgorithm.HS512, "JwtSecret") //采用什么算法是可以自己选择的，不一定非要采用HS512
                 .compact();
         res.addHeader("Authorization", "Bearer " + token);
+        res.getWriter().write("{'code':0, 'token': " + token + "}");
+        return;
     }
 }

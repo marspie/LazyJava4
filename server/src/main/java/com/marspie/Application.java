@@ -18,7 +18,7 @@ public class Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class);
-        logger.info("SpringBoot server stated on port: 8080");
+//        logger.info("SpringBoot server stated on port: 8080");
     }
 
     //增加一个SpringMVC的DispatcherServlet，接收前台/api开头的请求

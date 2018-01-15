@@ -1,6 +1,6 @@
 package com.marspie.framework.common.advice;
 
-import com.marspie.framework.common.web.Result;
+import com.marspie.framework.common.web.R;
 import com.marspie.framework.common.web.enums.ResultCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,13 +26,13 @@ public class ExceptionHandlerAdvice {
     private Logger logger = LoggerFactory.getLogger(ExceptionHandlerAdvice.class);
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public Result handleIllegalParamException(MethodArgumentNotValidException e) {
+    public R handleIllegalParamException(MethodArgumentNotValidException e) {
         List<ObjectError> errors = e.getBindingResult().getAllErrors();
         String tips = "参数不合法";
         if (errors.size() > 0) {
             tips = errors.get(0).getDefaultMessage();
         }
-        return ResultUtil.warn(ResultCode.PARAMETER_ERROR, tips);
+        return R.warn(ResultCode.PARAMETER_ERROR, tips);
     }
 
 //    @ExceptionHandler(ResultException.class)
